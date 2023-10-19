@@ -1,4 +1,4 @@
-package com.practice.psaa_batch.repository;
+package com.practice.psaa_batch.repository.pass;
 
 import com.practice.psaa_batch.repository.pass.*;
 import org.junit.jupiter.api.Test;
