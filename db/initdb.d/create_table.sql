@@ -1,3 +1,20 @@
+/*
+ id varchar(20)
+ status varchar(10)
+ 그 외 varchar(50)
+ */
+
+CREATE TABLE `package`
+(
+    `package_seq`  int         NOT NULL AUTO_INCREMENT COMMENT '패키지 순번',
+    `package_name` varchar(50) NOT NULL COMMENT '패키지 이름',
+    `count`        int                  DEFAULT NULL COMMENT '이용권 수, NULL인 경우 무제한',
+    `period`       int                  DEFAULT NULL COMMENT '기간(일), NULL인 경우 무제한',
+    `created_at`   timestamp   NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '생성 일시',
+    `modified_at`  timestamp            DEFAULT NULL COMMENT '수정 일시',
+    PRIMARY KEY (`package_seq`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='패키지';
+
 CREATE TABLE `pass`
 (
     `pass_seq`        int         NOT NULL AUTO_INCREMENT COMMENT '이용권 순번',
